@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.EditText
 import kotlinx.android.synthetic.main.activity_main.*
 
-const val EXTRA_MESSAGE = "com.example.starterproject.MESSAGE"
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         pager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tab_layout))
         tab_layout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-                println("onTabUnselcted")
+                println("onTabUnselected")
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
@@ -40,12 +39,12 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    /*fun sendMessage(view: View) {
-        val editText = findViewById<EditText>(R.id.editText)
-        val message = editText.text.toString()
-        val intent = Intent(this, DisplayMessageActivity::class.java).apply {
-            putExtra(EXTRA_MESSAGE, message)
-        }
-        startActivity(intent)
-    }*/
+//    fun sendMessage(view: View) {
+//        val editText = findViewById<EditText>(R.id.editText)
+//        val message = editText.text.toString()
+//        val intent = Intent(this, DisplayMessageActivity::class.java).apply {
+//            putExtra(EXTRA_MESSAGE, message)
+//        }
+//        startActivity(intent)
+//    }
 }
