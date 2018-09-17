@@ -2,6 +2,9 @@ package com.example.dsymhove.starterproject
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.widget.TextView
 
 class DisplayMessageActivity : AppCompatActivity() {
@@ -15,5 +18,15 @@ class DisplayMessageActivity : AppCompatActivity() {
         val textView = findViewById<TextView>(R.id.textView2).apply {
             text = message
         }
+
+        initRecyclerView()
+    }
+
+    private fun initRecyclerView() {
+        Log.d("tag", "init recycler view")
+        val recyclerView = findViewById<RecyclerView>(R.id.myRecyclerView)
+        val recyclerViewAdapter = RecyclerViewAdapter()
+        recyclerView.adapter = recyclerViewAdapter
+        recyclerView.layoutManager = LinearLayoutManager(this)
     }
 }
