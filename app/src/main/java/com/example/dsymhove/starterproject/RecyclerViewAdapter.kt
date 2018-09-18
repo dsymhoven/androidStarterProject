@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.RelativeLayout
 import android.widget.TextView
+import android.widget.Toast
 import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.layout_list_item.view.*
 import org.w3c.dom.Text
@@ -29,9 +30,14 @@ class RecyclerViewAdapter(list: Array<String>): RecyclerView.Adapter<RecyclerVie
         Log.d("tag", "onBindViewHolder called")
 
         holder.textView.text = list[position]
+        holder.parentLayout.setOnClickListener { v ->
+            Log.d("tag", "on Click listener")
+            Toast.makeText(v.context, list[position], Toast.LENGTH_SHORT).show()
+        }
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textView = view.myTextView
+        val parentLayout = view.parent_layout
     }
 }
