@@ -9,7 +9,8 @@ class TabPagerAdapter(fm: android.support.v4.app.FragmentManager, private var ta
     override fun getItem(position: Int): Fragment? {
         when (position) {
             0 -> return Tab1Fragment()
-            1 -> return  Tab2Fragment()
+            1 -> return Tab2Fragment()
+            2 -> return Tab3Fragment()
             else -> return null
         }
     }
