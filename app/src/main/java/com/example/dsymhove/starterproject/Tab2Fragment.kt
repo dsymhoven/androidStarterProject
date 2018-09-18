@@ -3,6 +3,7 @@ package com.example.dsymhove.starterproject
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -24,11 +25,16 @@ class Tab2Fragment : Fragment() {
 
         // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.fragment_tab2, container, false)
-        viewAdapter = 
-
-
-
+        val recyclerView = rootView.findViewById<RecyclerView>(R.id.fragmentRecyclerView)
+        setupRecyclerView(recyclerView)
         return rootView
+    }
+
+    fun setupRecyclerView(recyclerView: RecyclerView) {
+        val list = arrayOf("blah", "blub")
+        val recyclerViewAdapter = RecyclerViewAdapter(list)
+        recyclerView.adapter = recyclerViewAdapter
+        recyclerView.layoutManager = LinearLayoutManager(context)
     }
 
 

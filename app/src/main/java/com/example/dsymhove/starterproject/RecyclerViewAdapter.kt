@@ -12,20 +12,23 @@ import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.layout_list_item.view.*
 import org.w3c.dom.Text
 
-class RecyclerViewAdapter(): RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
+class RecyclerViewAdapter(list: Array<String>): RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
+
+    private val list = list
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewAdapter.ViewHolder {
         val rootView = LayoutInflater.from(parent.context).inflate(R.layout.layout_list_item, parent, false)
         return ViewHolder(rootView)
     }
 
     override fun getItemCount(): Int {
-        return 8
+        return list.count()
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         Log.d("tag", "onBindViewHolder called")
 
-        holder.textView.text = "This is my first RecyclerView"
+        holder.textView.text = list[position]
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {

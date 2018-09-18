@@ -25,7 +25,8 @@ class DisplayMessageActivity : AppCompatActivity() {
     private fun initRecyclerView() {
         Log.d("tag", "init recycler view")
         val recyclerView = findViewById<RecyclerView>(R.id.myRecyclerView)
-        val recyclerViewAdapter = RecyclerViewAdapter()
+        val list = arrayOf("Element1", "Element2", "Element3")
+        val recyclerViewAdapter = RecyclerViewAdapter(list = list)
         recyclerView.adapter = recyclerViewAdapter
         recyclerView.layoutManager = LinearLayoutManager(this)
     }

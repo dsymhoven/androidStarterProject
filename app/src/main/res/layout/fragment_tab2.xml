@@ -7,14 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".Tab1Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <android.support.v7.widget.RecyclerView
         android:layout_width="368dp"
         android:layout_height="495dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@style/Widget.Design.TabLayout"
+        app:layout_constraintTop_toTopOf="@+id/tab_layout"
+        android:id="@+id/fragmentRecyclerView"/>
 </android.support.constraint.ConstraintLayout>
