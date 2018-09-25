@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="12dp"
     android:id="@+id/profile_list_item_layout">
 
@@ -19,7 +19,7 @@
         android:textColor="#000"
         android:layout_toRightOf="@+id/profile_image"
         android:layout_marginLeft="10dp"
-        android:id="@+id/name_textView"/>
+        android:id="@+id/name_label"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
         android:layout_toRightOf="@+id/profile_image"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="10dp"
-        android:id="@+id/email_textView"/>
+        android:id="@+id/email_label"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
         android:layout_toRightOf="@+id/profile_image"
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
-        android:id="@+id/phone_textView"/>
+        android:id="@+id/phone_label"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -50,8 +50,9 @@
         android:textSize="16sp"
         android:textColor="#000"
         android:layout_toRightOf="@+id/profile_image"
-        android:layout_toEndOf="@+id/name_textView"
-        android:layout_marginLeft="10dp"/>
+        android:layout_toEndOf="@+id/name_label"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/name_textView"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -60,9 +61,10 @@
         android:textSize="16sp"
         android:textColor="#000"
         android:layout_toRightOf="@+id/profile_image"
-        android:layout_alignBottom="@+id/email_textView"
-        android:layout_toEndOf="@+id/email_textView"
-        android:layout_marginLeft="5dp" />
+        android:layout_alignBottom="@+id/email_label"
+        android:layout_toEndOf="@+id/email_label"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/email_textView"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -71,7 +73,8 @@
         android:textSize="16sp"
         android:textColor="#000"
         android:layout_toRightOf="@+id/profile_image"
-        android:layout_alignBottom="@+id/phone_textView"
-        android:layout_toEndOf="@+id/phone_textView"
-        android:layout_marginLeft="5dp" />
+        android:layout_alignBottom="@+id/phone_label"
+        android:layout_toEndOf="@+id/phone_label"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/phone_textView"/>
 </RelativeLayout>
