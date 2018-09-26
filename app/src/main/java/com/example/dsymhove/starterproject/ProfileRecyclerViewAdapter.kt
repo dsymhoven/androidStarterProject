@@ -23,7 +23,7 @@ class ProfileRecyclerViewAdapter(list: Array<Profile>): RecyclerView.Adapter<Pro
         holder.nameTextView.text = list[position].name
         holder.emailTextView.text = list[position].email
         holder.phoneTextView.text = list[position].phone
-        holder.imageView.setImageResource(list[position].drawable)
+        //holder.imageView.setImageResource(list[position].drawable!!)
     }
 
     class ProfileViewHolder(view: View): RecyclerView.ViewHolder(view) {
