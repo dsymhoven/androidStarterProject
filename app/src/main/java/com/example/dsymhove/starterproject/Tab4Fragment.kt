@@ -27,9 +27,9 @@ class Tab4Fragment : Fragment() {
     }
 
     private fun setupRecyclerView(recyclerView: RecyclerView) {
-        val profiles: Array<Profile> = arrayOf(Profile(name = "David", email = "david.symhoven@jambit.com", phone = "566", drawable = ContextCompat.getDrawable(context, R.drawable.ic_action_name),
-                Profile(name = "Sebastian", email = "sebastian.cohausz@jambit.com", phone = "123"),
-                Profile(name = "Tobi", email = "tobias.schroepf@jambit.com", phone = "666"))
+        val profiles: Array<Profile> = arrayOf(Profile(name = "David", email = "david.symhoven@jambit.com", phone = "566", drawable =  R.drawable.david),
+                Profile(name = "Sebastian", email = "sebastian.cohausz@jambit.com", phone = "123", drawable = R.drawable.david),
+                Profile(name = "Tobi", email = "tobias.schroepf@jambit.com", phone = "666", drawable = R.drawable.david))
         val adapter = ProfileRecyclerViewAdapter(profiles)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(context)
