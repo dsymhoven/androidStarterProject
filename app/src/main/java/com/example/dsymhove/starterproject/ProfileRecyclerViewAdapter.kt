@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.profile_list_item.view.*
 
-class ProfileRecyclerViewAdapter(list: Array<Profile>): RecyclerView.Adapter<ProfileRecyclerViewAdapter.ProfileViewHolder>() {
+class ProfileRecyclerViewAdapter(list: List<Profile>): RecyclerView.Adapter<ProfileRecyclerViewAdapter.ProfileViewHolder>() {
 
     private val list = list
 
@@ -20,8 +20,8 @@ class ProfileRecyclerViewAdapter(list: Array<Profile>): RecyclerView.Adapter<Pro
     }
 
     override fun onBindViewHolder(holder: ProfileViewHolder, position: Int) {
-        holder.nameTextView.text = list[position].name
-        holder.emailTextView.text = list[position].email
+        holder.nameTextView.text = list[position].firstname
+        holder.emailTextView.text = list[position].mail
         holder.phoneTextView.text = list[position].phone
         //holder.imageView.setImageResource(list[position].drawable!!)
     }
